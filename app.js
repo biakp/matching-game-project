@@ -141,7 +141,11 @@ function winner() {
       type: "success",
       allowOutsideClick: false,
       animation: false,
-      customClass: "animated swing"
+      customClass: "animated swing",
+      confirmButtonText: "Play Again?",
+      confirmButtonColor: '#d33'
+    }).then(function() {
+      location.reload();
     });
   }
 }
