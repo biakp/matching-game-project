@@ -74,19 +74,19 @@ function closeCard() {
 
 //Match cards
 function matchCards() {
-  if (openCards.length === 2) {
-    $(".deck").addClass("disabled");
-    if (openCards[0].classList[2] === openCards[1].classList[2]) {
-      openCards[0].classList.add("match");
-      openCards[1].classList.add("match");
-      $(openCards[0]).addClass("disabled animated shake");
-      $(openCards[1]).addClass("disabled animated shake");
-      win++;
+    if (openCards.length === 2) {
+      $(".deck").addClass("disabled");
+      if (openCards[0].classList[2] === openCards[1].classList[2]) {
+        openCards[0].classList.add("match");
+        openCards[1].classList.add("match");
+        $(openCards[0]).addClass("disabled animated shake");
+        $(openCards[1]).addClass("disabled animated shake");
+        win++;
+      } else {
+        setTimeout(closeCard, 3000);
+      }
     }
-  } else {
-    setTimeout(closeCard, 3000);
   }
-}
 
 //Timer
 function timing() {
