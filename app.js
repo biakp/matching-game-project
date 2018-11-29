@@ -85,7 +85,7 @@ function matchCards() {
       openCards = [];
       win++;
     } else {
-      setTimeout(closeCard, 3000);
+      setTimeout(closeCard, 2000);
     }
   }
 }
